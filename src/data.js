@@ -41,7 +41,7 @@ const data = {
   // ─── 个人经历 ────────────────────────────────────
   about: {
     // 左侧
-    photoUrl: img('./img/sw.jpg'),          // / 下
+    photoUrl: '/Ersbox/sw.jpg',          // / 下
     tags: ['客户开发', '商务谈判', '流量引流', '社群运营', '商业咨询'],
 
     // 右侧
@@ -79,7 +79,7 @@ const data = {
     handle: '耳人水',
     status: 'Online',
     contactText: '联系我',
-    avatarUrl: img('./img/sw.jpg'),         // 头像照片
+    avatarUrl: '/Ersbox/sw.jpg',         // 头像照片
     innerGradient: 'linear-gradient(145deg, #14141c 0%, #2a2a3e 100%)',
     behindGlowColor: 'rgba(140,140,160,0.5)',
   },
