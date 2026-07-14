@@ -1,8 +1,10 @@
-// ============================================================
+﻿// ============================================================
 // 📁 商务作品集 - 数据中心
 // 修改此文件即可更新页面所有内容，无需改动组件代码
 // 图片放在 public/ 文件夹，引用路径写 /文件名.jpg
 // ============================================================
+
+const img = (p) => new URL(p, import.meta.url).href;
 
 const data = {
 
@@ -39,7 +41,7 @@ const data = {
   // ─── 个人经历 ────────────────────────────────────
   about: {
     // 左侧
-    photoUrl: '/sw.jpg',          // 商务形象照，放 public/ 下
+    photoUrl: img('./img/sw.jpg'),          // / 下
     tags: ['客户开发', '商务谈判', '流量引流', '社群运营', '商业咨询'],
 
     // 右侧
@@ -77,7 +79,7 @@ const data = {
     handle: '耳人水',
     status: 'Online',
     contactText: '联系我',
-    avatarUrl: '/sw.jpg',         // 头像照片
+    avatarUrl: img('./img/sw.jpg'),         // 头像照片
     innerGradient: 'linear-gradient(145deg, #14141c 0%, #2a2a3e 100%)',
     behindGlowColor: 'rgba(140,140,160,0.5)',
   },
@@ -146,3 +148,4 @@ const data = {
 };
 
 export default data;
+

@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+﻿import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -56,9 +56,9 @@ export function animateParallax() {
     var img = el.querySelector('img');
     if (!img) return;
     gsap.fromTo(el, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 1, ease: 'power2.out',
-      scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none reverse' }
+      scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none reverse' }
     });
-    gsap.fromTo(img, { y: -30 }, { y: 30, ease: 'none',
+    gsap.fromTo(img, { y: -15 }, { y: 15, ease: 'none',
       scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: 1 }
     });
   });
@@ -67,7 +67,7 @@ export function animateParallax() {
 export function animateTimeline() {
   gsap.utils.toArray('[data-animate="timeline"]').forEach(function(el, i) {
     gsap.fromTo(el, { x: -30, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: 'power2.out', delay: i * 0.15,
-      scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none reverse' }
+      scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none reverse' }
     });
   });
 }
@@ -93,3 +93,4 @@ export function initAnimations() {
   ScrollTrigger.refresh();
   return ctx;
 }
+

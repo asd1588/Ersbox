@@ -6,6 +6,7 @@ import SpotlightCard from './components/SpotlightCard'
 import data from './data'
 import { initAnimations } from './animations'
 import './components/ProfileCard.css'
+import './mobile.css'
 
 const styles = {
   container: { maxWidth: 1700, margin: '0 auto', padding: '0 40px' },
@@ -144,7 +145,7 @@ function Experience() {
         <div style={{ display: 'grid', gridTemplateColumns: '360px 1fr', gap: 64, alignItems: 'start' }} className="experience-grid">
           <div>
             <div data-animate="parallax" style={{ width: '100%', aspectRatio: '3/4', borderRadius: 12, overflow: 'hidden', border: '1px solid #1e1e28', background: '#14141c' }}>
-              <img src="/sw.jpg" alt="商务形象照" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src={data.about.photoUrl} alt="商务形象照" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ marginTop: 24, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
               {tags.map(t => (
@@ -277,7 +278,7 @@ export default function App() {
     <div>
       <style>{`
         .ani-line { display: block; overflow: hidden; }
-.ani-line span { display: block; }
+.ani-line span { display: block; padding: 0.2em 0; }
 [data-animate] { will-change: transform, opacity; }
         @media (max-width: 768px) {
           .nav-links { display: none !important }
@@ -306,6 +307,8 @@ export default function App() {
     </div>
   )
 }
+
+
 
 
 
